@@ -1,6 +1,6 @@
 package views;
 import java.awt.*;
-
+import javax.swing.*;
 import javax.swing.*;
 
 public class ConsultarAluno extends JDialog {
@@ -117,7 +117,7 @@ JPanel painelPesquisa = new JPanel(new BorderLayout());
 	    	    BorderFactory.createCompoundBorder(
 	    	        BorderFactory.createEmptyBorder(0, 0, 10, 0),
 	    	        BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1)
-	    	    )
+		    )
 	    	);
 	    
 	    cardAluno.setPreferredSize(
@@ -136,8 +136,3 @@ JPanel painelPesquisa = new JPanel(new BorderLayout());
 		
 		return cardAluno;
 	}
-
-
-}
-
-

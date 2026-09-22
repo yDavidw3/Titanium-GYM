@@ -3,13 +3,15 @@ package views;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
+import javax.swing.*;
 import javax.swing.*;
 
 public class ConsultarFuncionario extends JDialog {
 	
 	public ConsultarFuncionario() {		
 		this.setTitle("Consultar funcionario");
+	    this.setModal(true);
+	    this.setTitle("Consultar funcionario");
 	    this.setModal(true);
 	    this.setSize(700,600);  
 	    this.setResizable(false);
@@ -61,7 +63,7 @@ public class ConsultarFuncionario extends JDialog {
 	                "Subsecretário sacana",
 	                "Passivo"
 	            )
-	        );
+        );
 	    
 	    listaFuncionario.add(
 	            criarCardFuncionario(
@@ -70,15 +72,15 @@ public class ConsultarFuncionario extends JDialog {
 	                "Consultor de travestis",
 	                "Ativo"
 	            )
-	        );
+        );
 	    
 	    listaFuncionario.add(
 	    		criarCardFuncionario(
 	    				"04",
-	    				"Breno Dourado",
-	    				"Repositor de Chads",
-	    				"Repondo..."
-	    				)
+					"Breno Dourado",
+					"Repositor de Chads",
+					"Repondo..."
+					)
 	    		);
 	    
 	    
@@ -131,7 +133,7 @@ public class ConsultarFuncionario extends JDialog {
 	    	    BorderFactory.createCompoundBorder(
 	    	        BorderFactory.createEmptyBorder(0, 0, 10, 0),
 	    	        BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1)
-	    	    )
+		    )
 	    	);
 	    
 	    cardFuncionario.setPreferredSize(

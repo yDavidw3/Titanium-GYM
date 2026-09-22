@@ -1,17 +1,12 @@
 package views;
 
-import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing. *;
-import javax.swing.border.TitledBorder;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class CadAluno extends JDialog {
 	
 	public CadAluno() {		
-	
-
 		this.setTitle("Cadastro de aluno");
 		this.setModal(true);
 		this.setSize(700,800);  
@@ -56,8 +51,3 @@ public class CadAluno extends JDialog {
 		);
 					
 		this.setVisible(true);
-
-		}
-}
-	
-
