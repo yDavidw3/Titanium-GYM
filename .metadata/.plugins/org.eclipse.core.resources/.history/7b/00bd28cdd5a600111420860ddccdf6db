@@ -1,0 +1,133 @@
+package views;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class CadAluno extends JDialog {
+
+    public CadAluno() {
+
+        this.setTitle("Cadastro de Alunos");
+        this.setModal(true);
+        this.setSize(700, 800);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+        setLayout(null);
+
+        // TÍTULO
+        JLabel titulo = new JLabel("Cadastro de Aluno");
+        titulo.setBounds(30, 20, 600, 40);
+        titulo.setFont(new Font("Arial", Font.BOLD, 28));
+        titulo.setForeground(Color.BLUE);
+        add(titulo);
+
+        // SUBTÍTULO
+        JLabel subtitulo = new JLabel("Preencha os dados do aluno");
+        subtitulo.setBounds(32, 60, 400, 25);
+        subtitulo.setFont(new Font("Arial", Font.PLAIN, 15));
+        subtitulo.setForeground(Color.GRAY);
+        add(subtitulo);
+
+
+        // NOME
+        JLabel nome = new JLabel("Nome:");
+        nome.setBounds(30, 110, 150, 30);
+        nome.setFont(new Font("Arial", Font.BOLD, 16));
+        add(nome);
+
+        JTextField inpNome = new JTextField();
+        inpNome.setBounds(30, 140, 620, 35);
+        inpNome.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpNome);
+
+
+        // DATA DE NASCIMENTO
+        JLabel dataNasc = new JLabel("Data de nascimento:");
+        dataNasc.setBounds(30, 190, 180, 30);
+        dataNasc.setFont(new Font("Arial", Font.BOLD, 16));
+        add(dataNasc);
+
+        JTextField inpNasc = new JTextField();
+        inpNasc.setBounds(30, 220, 280, 35);
+        inpNasc.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpNasc);
+
+
+        // CPF
+        JLabel cpf = new JLabel("CPF:");
+        cpf.setBounds(340, 190, 150, 30);
+        cpf.setFont(new Font("Arial", Font.BOLD, 16));
+        add(cpf);
+
+        JTextField inpCpf = new JTextField();
+        inpCpf.setBounds(340, 220, 310, 35);
+        inpCpf.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpCpf);
+
+
+        // TELEFONE
+        JLabel fone = new JLabel("Telefone:");
+        fone.setBounds(30, 270, 150, 30);
+        fone.setFont(new Font("Arial", Font.BOLD, 16));
+        add(fone);
+
+        JTextField inpFone = new JTextField();
+        inpFone.setBounds(30, 300, 280, 35);
+        inpFone.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpFone);
+
+
+        // ENDEREÇO
+        JLabel ende = new JLabel("Endereço:");
+        ende.setBounds(30, 350, 150, 30);
+        ende.setFont(new Font("Arial", Font.BOLD, 16));
+        add(ende);
+
+        JTextField inpEnde = new JTextField();
+        inpEnde.setBounds(30, 380, 620, 35);
+        inpEnde.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpEnde);
+
+
+        // BOTÃO CADASTRAR
+        JButton cadastrar = new JButton("Cadastrar");
+        cadastrar.setBounds(30, 450, 620, 45);
+        cadastrar.setFont(new Font("Arial", Font.BOLD, 16));
+        cadastrar.setBackground(Color.BLUE);
+        cadastrar.setForeground(Color.WHITE);
+        add(cadastrar);
+
+
+        // BOTÃO LIMPAR
+        JButton limpar = new JButton("Limpar");
+        limpar.setBounds(30, 510, 300, 40);
+        limpar.setFont(new Font("Arial", Font.BOLD, 15));
+        add(limpar);
+
+
+        // BOTÃO CANCELAR
+        JButton cancelar = new JButton("Cancelar");
+        cancelar.setBounds(350, 510, 300, 40);
+        cancelar.setFont(new Font("Arial", Font.BOLD, 15));
+        add(cancelar);
+
+
+        // AÇÃO DO BOTÃO CANCELAR
+        cancelar.addActionListener(e -> {
+            dispose();
+        });
+
+
+        // AÇÃO DO BOTÃO LIMPAR
+        limpar.addActionListener(e -> {
+            inpNome.setText("");
+            inpNasc.setText("");
+            inpCpf.setText("");
+            inpFone.setText("");
+            inpEnde.setText("");
+        });
+
+
+        setVisible(true);
+    }
+}

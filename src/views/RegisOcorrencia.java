@@ -1,0 +1,157 @@
+
+package views;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class RegisOcorrencia extends JDialog {
+
+    public RegisOcorrencia() {
+
+        this.setTitle("Registro de Ocorrência");
+        this.setModal(true);
+        this.setSize(700, 700);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+        setLayout(null);
+
+
+       
+        JLabel titulo = new JLabel("Registro de Ocorrência");
+        titulo.setBounds(30, 20, 600, 40);
+        titulo.setFont(new Font("Arial", Font.BOLD, 28));
+        titulo.setForeground(Color.BLUE);
+        add(titulo);
+
+
+        
+        JLabel subtitulo = new JLabel("Registre uma ocorrência relacionada à academia");
+        subtitulo.setBounds(32, 60, 500, 25);
+        subtitulo.setFont(new Font("Arial", Font.PLAIN, 15));
+        subtitulo.setForeground(Color.GRAY);
+        add(subtitulo);
+
+
+        
+        JLabel aluno = new JLabel("Nome do aluno:");
+        aluno.setBounds(30, 110, 200, 30);
+        aluno.setFont(new Font("Arial", Font.BOLD, 16));
+        add(aluno);
+
+        JTextField inpAluno = new JTextField();
+        inpAluno.setBounds(30, 140, 620, 35);
+        inpAluno.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpAluno);
+
+
+        
+        JLabel data = new JLabel("Data da ocorrência:");
+        data.setBounds(30, 190, 200, 30);
+        data.setFont(new Font("Arial", Font.BOLD, 16));
+        add(data);
+
+        JTextField inpData = new JTextField();
+        inpData.setBounds(30, 220, 280, 35);
+        inpData.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpData);
+
+
+        
+        JLabel tipo = new JLabel("Tipo da ocorrência:");
+        tipo.setBounds(340, 190, 200, 30);
+        tipo.setFont(new Font("Arial", Font.BOLD, 16));
+        add(tipo);
+
+        JTextField inpTipo = new JTextField();
+        inpTipo.setBounds(340, 220, 310, 35);
+        inpTipo.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpTipo);
+
+
+        
+        JLabel responsavel = new JLabel("Responsável pelo registro:");
+        responsavel.setBounds(30, 270, 250, 30);
+        responsavel.setFont(new Font("Arial", Font.BOLD, 16));
+        add(responsavel);
+
+        JTextField inpResponsavel = new JTextField();
+        inpResponsavel.setBounds(30, 300, 620, 35);
+        inpResponsavel.setFont(new Font("Arial", Font.PLAIN, 15));
+        add(inpResponsavel);
+
+
+        
+        JLabel descricao = new JLabel("Descrição da ocorrência:");
+        descricao.setBounds(30, 350, 250, 30);
+        descricao.setFont(new Font("Arial", Font.BOLD, 16));
+        add(descricao);
+
+        JTextArea inpDescricao = new JTextArea();
+        inpDescricao.setBounds(30, 380, 620, 100);
+        inpDescricao.setFont(new Font("Arial", Font.PLAIN, 15));
+        inpDescricao.setLineWrap(true);
+        inpDescricao.setWrapStyleWord(true);
+        add(inpDescricao);
+
+
+        
+        JButton registrar = new JButton("Registrar Ocorrência");
+        registrar.setBounds(30, 510, 620, 45);
+        registrar.setFont(new Font("Arial", Font.BOLD, 16));
+        registrar.setBackground(Color.BLUE);
+        registrar.setForeground(Color.WHITE);
+        add(registrar);
+
+
+       
+        JButton limpar = new JButton("Limpar");
+        limpar.setBounds(30, 570, 300, 40);
+        limpar.setFont(new Font("Arial", Font.BOLD, 15));
+        add(limpar);
+
+
+       
+        JButton cancelar = new JButton("Cancelar");
+        cancelar.setBounds(350, 570, 300, 40);
+        cancelar.setFont(new Font("Arial", Font.BOLD, 15));
+        add(cancelar);
+
+
+        
+        limpar.addActionListener(e -> {
+
+            inpAluno.setText("");
+            inpData.setText("");
+            inpTipo.setText("");
+            inpResponsavel.setText("");
+            inpDescricao.setText("");
+
+        });
+
+
+        
+        cancelar.addActionListener(e -> {
+
+            dispose();
+
+        });
+
+
+        
+        registrar.addActionListener(e -> {
+
+            JOptionPane.showMessageDialog(
+                this,
+                "Ocorrência registrada com sucesso!",
+                "Ocorrência",
+                JOptionPane.INFORMATION_MESSAGE
+            );
+
+        });
+
+
+        setVisible(true);
+    }
+}
+
+
